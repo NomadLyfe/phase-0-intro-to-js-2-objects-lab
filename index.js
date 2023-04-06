@@ -1,18 +1,17 @@
-const employee = {};
-function updateEmployeeWithKeyAndValue(employee, key, value){
-    const employee1 = {...employee, [key]: value};
-    return employee1;
+const employee = {name: 'sam'};
+function updateEmployeeWithKeyAndValue(employee, key, value) {
+    return {...employee, [key]: value};
 }
-function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
+function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
     employee[key] = value;
     return employee;
 }
-function deleteFromEmployeeByKey(employee, key){
-    const employee2 = {...employee};
-    delete employee2[key];
-    return employee2;
+function deleteFromEmployeeByKey(employee, key) {
+    const newEmployee = {...employee}
+    delete newEmployee[key];
+    return newEmployee;
 }
-function destructivelyDeleteFromEmployeeByKey(employee, key){
+function destructivelyDeleteFromEmployeeByKey(employee, key) {
     delete employee[key];
     return employee;
 }
